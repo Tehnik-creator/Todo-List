@@ -27,9 +27,6 @@ if (addInput.value === '') {
 function addTask(event) {
     event.preventDefault();
     const label = addInput.value;
-    if (label) {
-        addInput.classList.add("is-invalid");
-    }
 
     if (addInput.value === '') {
         addInput.classList.add("is-invalid");
