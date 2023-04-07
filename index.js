@@ -28,12 +28,6 @@ function addTask(event) {
     event.preventDefault();
     const label = addInput.value;
 
-    if (addInput.value === '') {
-        addInput.classList.add("is-invalid");
-    } else {
-        addInput.classList.remove("is-invalid");
-    }
-
     if (!label) return;
 
     const task = {
