@@ -1,0 +1,8 @@
+.add_card {
+    width: 70%;
+}
+
+.task_container {
+    display: flex;
+    justify-content: center;
+}
