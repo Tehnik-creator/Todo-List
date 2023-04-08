@@ -1,7 +1,7 @@
-const addBtn = document.querySelector('.task_add_btn')
+const addBtnSubmit = document.querySelector('.task_add_btn')
 const addInput = document.querySelector('.add_task_input')
 
-const allTasks = [1, 2];
+const allTasks = [];
 
 const STATUSES = {
     TODO: 'TODO',
@@ -14,32 +14,31 @@ const STATES = {
     ARCHIVE: 'ARCHIVE',
     DELETED: 'DELETED'
 };
+
 // false true
 // Boolean(), String(), Number()
-console.log(addInput.value)
-if (addInput.value === '') {
-    addInput.classList.add("is-invalid");
-} else {
-    addInput.classList.remove("is-invalid");
-}
-
 
 function addTask(event) {
     event.preventDefault();
-    const label = addInput.value;
+    const taskLabel = addInput.value;
 
-    if (!label) return;
+    if (!taskLabel) {
+        addInput.classList.add('is-invalid')
+        return;
+    } else {
+        addInput.classList.remove('is-invalid')
+    }
 
     const task = {
         id: crypto.randomUUID(),
-        label:  label,
+        label:  taskLabel,
         createdAt: new Date(),
         status: STATUSES.TODO,
         state: STATES.ACTIVE
     }
+
     allTasks.push(task);
     console.log(allTasks)
 }
 
-addBtn.addEventListener('click', addTask)
-
+addBtnSubmit.addEventListener('click', addTask)
