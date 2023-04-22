@@ -1,8 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .add_card {
     width: 70%;
 }
 
-.task_container {
-    display: flex;
-    justify-content: center;
+.card-actions {
+    font-size: 25px;
+}
+
+.icons {
+    font-size: 20px;
+    color: #333;
 }

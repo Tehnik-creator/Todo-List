@@ -15,15 +15,21 @@
     <script defer  src="index.js"></script>
 </head>
 <body>
-<div class="container task_container">
-    <div class="card add_card p-3">
-        <form>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-task"></i></span>
-                <input required type="text" class="form-control add_task_input" placeholder="Название задачи" aria-label="Username" aria-describedby="basic-addon1">
-            </div>
-            <button type="submit" class="btn btn-success task_add_btn">Добавить задачу</button>
-        </form>
+<div class="container">
+    <div class="row mb-4">
+        <div class="card add_card p-3">
+            <form>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-task"></i></span>
+                    <input required type="text" class="form-control add_task_input" placeholder="Название задачи" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <button type="submit" class="btn btn-success task_add_btn">Добавить задачу</button>
+            </form>
+        </div>
+    </div>
+    <h1 class="display-4 text-center mb-4">Список задач</h1>
+    <div class="task_list">
+
     </div>
 </div>
 </body>
